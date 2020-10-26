@@ -11,3 +11,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 TBLPROPERTIES("skip.header.line.count"="1");
+
+# Load the data into the 'drivers' table
+
+LOAD DATA INPATH '/user/rlunett/tmp/data/drivers.csv' OVERWRITE INTO TABLE drivers;
+
+
+
