@@ -17,4 +17,6 @@ hdfs dfs -get output/c/part-r-00000 truck_event.csv
 
 cat truck_event.csv | tail -n 2
 
+# Remotely download the output file to local disk to visualize it using Excel Power Map
+scp rlunett@[Hadoop.Cluster.IP]:/home/rlunett/truck_event.csv .
 
