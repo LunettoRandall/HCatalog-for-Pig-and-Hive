@@ -39,4 +39,24 @@ TBLPROPERTIES("skip.header.line.count"="1");
 LOAD DATA INPATH '/user/rlunett/tmp/data/truck_event_text_partition.csv' OVERWRITE INTO
 TABLE truck_events;
 
+# Create JOIN between drivers and truck_events
+
+select a.driverId,a.driverName,a.eventType,b.certified
+from truck_events a join drivers b ON (a.driverId = b.driverId);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
