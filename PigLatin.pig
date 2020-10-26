@@ -20,3 +20,6 @@ c = join b by driverid, a by driverid;
 
 dump c;
 
+# Output a relation into a new file in HDFS. Output the c relation to a folder named output/c .
+
+STORE c INTO 'output/c' USING PigStorage(',');
