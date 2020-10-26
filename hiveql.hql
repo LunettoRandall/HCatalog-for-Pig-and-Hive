@@ -1,3 +1,5 @@
+# Create 'drivers' tables 
+
 create table drivers
 (driverId int,
 name string,
