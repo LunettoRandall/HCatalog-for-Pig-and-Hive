@@ -33,3 +33,10 @@ routeName string)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 TBLPROPERTIES("skip.header.line.count"="1");
+
+# Load the data into the 'truck_events' table
+
+LOAD DATA INPATH '/user/rlunett/tmp/data/truck_event_text_partition.csv' OVERWRITE INTO
+TABLE truck_events;
+
+
